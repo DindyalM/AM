@@ -1,0 +1,80 @@
+/* Resetting some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts and background */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Full container to center the content */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+/* Flex layout for image grid */
+.image-grid {
+  display: flex;
+  flex-wrap: no-wrap; /* If you want the images to wrap to the next line, change this to wrap */
+  justify-content: space-between;
+  gap: 2rem; /* Providing some gap between images */
+}
+
+/* Styles for the images */
+.product-card img {
+  width: 100%; /* This will make the image take the full width of its parent */
+  object-fit: cover; /* This will make sure the image covers the area, might crop a bit if the aspect ratio doesn't match */
+}
+
+/* Styles for selected product */
+.product-card.selected {
+  border: 3px solid #7f9cf5; /* Using more modern color */
+  box-shadow: 0 0 10px rgba(127, 159, 245, 0.5); /* Adding a shadow for a bit of depth */
+}
+
+/* Styles for Form */
+.form-section {
+  margin-top: 3rem;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Styles for Button */
+.btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #7f9cf5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Added transition for a smooth hover effect */
+}
+
+.btn:hover {
+  background-color: #5a7fe2; /* Darker shade on hover */
+}

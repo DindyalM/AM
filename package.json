@@ -1,0 +1,22 @@
+{
+  "name": "vite-svelte-starter",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.4.1",
+    "svelte": "^3.59.1",
+    "vite": "^4.3.9"
+  },
+  "dependencies": {
+    "chart.js": "^4.3.0",
+    "emailjs-com": "^3.2.0",
+    "html2pdf.js": "^0.10.1",
+    "mammoth": "^1.6.0"
+  }
+}
