@@ -1,80 +1,220 @@
-/* Resetting some default styles */
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fonts and background */
+/* Global styles */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #f2f2f2;
   color: #333;
   line-height: 1.6;
 }
 
-/* Full container to center the content */
 .container {
   max-width: 1200px;
-  margin: auto;
-  padding: 0 2rem;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Flex layout for image grid */
+/* Header section */
+.header-section {
+  background-color: #603811;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.header-section h1 {
+  font-size: 32px;
+  color: #fff;
+  margin: 0;
+}
+
+/* Hero section */
+.hero-section {
+  background-color: #f2e7d4;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 36px;
+  color: #603811;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: #603811;
+  margin: 10px 0 0;
+}
+
+/* Image grid */
 .image-grid {
-  display: flex;
-  flex-wrap: no-wrap; /* If you want the images to wrap to the next line, change this to wrap */
-  justify-content: space-between;
-  gap: 2rem; /* Providing some gap between images */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
 }
 
-/* Styles for the images */
-.product-card img {
-  width: 100%; /* This will make the image take the full width of its parent */
-  object-fit: cover; /* This will make sure the image covers the area, might crop a bit if the aspect ratio doesn't match */
+.product-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Styles for selected product */
 .product-card.selected {
-  border: 3px solid #7f9cf5; /* Using more modern color */
-  box-shadow: 0 0 10px rgba(127, 159, 245, 0.5); /* Adding a shadow for a bit of depth */
+  background-color: #f2e7d4;
 }
 
-/* Styles for Form */
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-card-content {
+  margin-top: 10px;
+}
+
+.product-card-title {
+  font-size: 24px;
+  color: #603811;
+  margin: 0;
+}
+
+.product-card-description {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Pricing */
+.pricing-section {
+  margin-top: 40px;
+}
+
+.pricing-table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.pricing-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.pricing-card:hover {
+  background-color: #f2e7d4;
+}
+
+.pricing-card.selected {
+  background-color: #f2e7d4;
+}
+
+.pricing-card h2 {
+  font-size: 24px;
+  color: #603811;
+  margin: 0;
+}
+
+.pricing-card p {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.pricing-card .original-price {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.pricing-card .discounted-price {
+  font-weight: bold;
+  color: #603811;
+}
+
+/* Form section */
 .form-section {
-  margin-top: 3rem;
+  margin-top: 20px;
+}
+
+.header {
+  font-size: 28px;
+  color: #603811;
+  margin: 0 0 20px;
+  text-align: center;
 }
 
 .form-group {
-  margin-bottom: 2rem;
+  margin-bottom: 15px;
 }
 
 .form-label {
-  display: block;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
+  font-size: 18px;
+  color: #603811;
+  margin-bottom: 5px;
 }
 
 .form-input {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #999;
+  border-radius: 4px;
 }
 
-/* Styles for Button */
-.btn {
-  padding: 0.75rem 1.5rem;
-  background-color: #7f9cf5;
+.form-input:focus {
+  outline: none;
+  border-color: #603811;
+}
+
+.form-error-message {
+  font-size: 14px;
+  color: #ff4136;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #603811;
   color: #fff;
+  font-size: 16px;
   border: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 4px;
   cursor: pointer;
-  transition: all 0.3s ease; /* Added transition for a smooth hover effect */
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #5a7fe2; /* Darker shade on hover */
+.submit-button:hover {
+  background-color: #4b290d;
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #603811;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.scroll-to-top:hover {
+  background-color: #4b290d;
 }

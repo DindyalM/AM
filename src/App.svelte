@@ -3,17 +3,44 @@
   import { onMount } from 'svelte';
   import { writable } from 'svelte/store';
 
-  const categories = ['cannabis', 'marijuana', 'weed', 'ganja'];
-
-  const products = writable(categories.map((category, id) => {
-    return {
-      id: id + 1,
-      img: `https://source.unsplash.com/random/300x200/?${category}`,
+  const products = writable([
+    {
+      id: 1,
+      img: `https://cheapcanna.org/wp-content/uploads/2023/06/Black-Diamond-AA-cc-700x700.jpg`,
       selected: false,
-      description: `This is a high-quality product in the category of ${category}.`,
-      name: 'Product ' + (id + 1)
-    };
-  }));
+      description: `$35.00
+$70.00
+$130.00`,
+      name: 'Black Diamond'
+    },
+    {
+      id: 2,
+      img: 'https://cheapcanna.org/wp-content/uploads/2023/05/Frosty-Banana-AA-cc-700x700.jpg',
+      selected: false,
+      description: `$30.00
+$70.00
+$130.00`,
+      name: 'Frosty Banana'
+    },
+    {
+      id: 3,
+      img: `https://cheapcanna.org/wp-content/uploads/2023/06/LSD-AA-cc-700x700.jpg`,
+      selected: false,
+      description: `$30.00
+$70.00
+$130.00`,
+      name: 'LSD'
+    },
+    {
+      id: 4,
+      img: `https://cheapcanna.org/wp-content/uploads/2023/06/Romulan-AA-cc-700x700.jpg`,
+      selected: false,
+      description: `$35.00
+$70.00
+$130.00`,
+      name: 'Romulan'
+    }
+  ]);
 
   const toggleSelection = (product) => {
     products.update(allProducts => {
@@ -50,16 +77,18 @@
 
     const verificationCode = generateVerificationCode();
     const productPhotoLinks = orderedProducts.map((product) => product.img).join(', ');
+    const productDescriptions = orderedProducts.map((product) => product.description).join(', ');
 
     const templateParams = {
       to_name: 'Your Name',
       from_name: name.value,
       message: verificationCode,
-      order: productPhotoLinks
+      order: productPhotoLinks,
+      descriptions: productDescriptions
     };
 
     try {
-      await emailjs.send('drw4953', 'template_2ik2luv', templateParams, 'uKJs24_n7AgzyaHKF');
+      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID');
       resetForm(event, 'Form submitted successfully! We will contact you shortly.');
     } catch (error) {
       alert(`An error occurred while submitting the form: ${error.text}`);
@@ -70,6 +99,135 @@
     window.scrollTo(0, 0);
   });
 </script>
+
+<style>
+  .header-section {
+    background-color: #603811;
+    padding: 20px;
+  }
+
+  .header-section h1 {
+    font-size: 32px;
+    color: #FFF;
+    margin: 0;
+    text-align: center;
+  }
+
+  .hero-section {
+    background-color: #F2E7D4;
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 36px;
+    color: #603811;
+    margin: 0;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+    color: #603811;
+    margin: 10px 0 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+
+  .product-card {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .product-card.selected {
+    background-color: #F2E7D4;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .product-card-content {
+    margin-top: 10px;
+  }
+
+  .product-card-title {
+    font-size: 24px;
+    color: #603811;
+    margin: 0;
+  }
+
+  .product-card-description {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+  }
+
+  .form-section {
+    margin-top: 20px;
+  }
+
+  .header {
+    font-size: 28px;
+    color: #603811;
+    margin: 0 0 20px;
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-label {
+    font-size: 18px;
+    color: #603811;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .form-input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #CCC;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .btn {
+    background-color: #603811;
+    color: #FFF;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background-color: #603811;
+  }
+
+  .btn-primary:hover {
+    background-color: #4B290D;
+  }
+</style>
 
 <div class="header-section">
   <h1>Welcome to Amora</h1>
