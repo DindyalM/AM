@@ -128,7 +128,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 2px center;
 }
 
 /* Header section */
@@ -165,7 +165,7 @@ body {
 
 /* Image grid */
  .image-grid {
-  display: grid;
+  display: grid center;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 10px; /* Adjust gap size according to your preference */
 
@@ -194,10 +194,10 @@ body {
 }
 
 .product-card img {
-  width: 120px;
-  height: auto;
+  width: 60%;
+  height: 60%;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   object-fit: cover; /* Ensure the images maintain their aspect ratio */
 }
 
@@ -237,7 +237,7 @@ body {
   font-size: 16px;
   color: #603811;
   margin-bottom: 5px;
-  display: block;
+  display: block center;
 }
 
 .form-input {
