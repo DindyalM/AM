@@ -156,27 +156,32 @@ body {
   margin: 10px 0 0;
 }
 
-/* Image row */
-  .image-row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    overflow-x: auto;  /* Enables horizontal scrolling if content overflows */
-    scrollbar-width: thin;  /* Decreases the scrollbar width */
-  }
-
-  .product-card {
-    flex: 0 0 auto;  /* Prevents the items from stretching */
-    margin-right: 10px;  /* Adds some space between the items */
+/* Image grid */
+ .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 10px; /* Adjust gap size according to your preference */
   }
 
   .product-card img {
-    max-width: 100%;  /* Ensures the image is not wider than its container */
-    height: auto;
-    object-fit: cover;  /* Ensures the image covers the entire area of its container */
+    max-width: 100%; /* Makes sure the image is not wider than its container */
+    max-height: 200px; /* Adjust height according to your preference */
+    object-fit: cover; /* Ensures that the image covers the entire area of its container */
     border-radius: 8px;
     margin-bottom: 10px;
   }
+
+.product-card.selected {
+  background-color: #F2E7D4;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover; /* Ensure the images maintain their aspect ratio */
+}
 
 .product-card-content {
   margin-top: 10px;
