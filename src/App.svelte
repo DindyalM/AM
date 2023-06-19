@@ -65,7 +65,9 @@ $130.00`,
 
     const { name, email, phone } = event.target.elements;
 
-      console.log(phone.value);  // Add this line
+
+  const phone2 = document.querySelector("#phone").value;
+
 
 
     let orderedProducts;
@@ -88,7 +90,7 @@ $130.00`,
       message: verificationCode,
       order: [productDescriptions, productPhotoLinks],
       from_email: email.value,
-      from_phone: phone.value
+      from_phone: phone2
     };
 
     try {
