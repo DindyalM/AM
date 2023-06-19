@@ -29,11 +29,14 @@
     alert(alertMessage);
   };
 
+  const generateVerificationCode = () => {
+    return Math.floor(100000 + Math.random() * 900000);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const { name, email, phone } = event.target.elements;
-    const verificationCode = Math.floor(Math.random() * 1000000); // Generate a random 6-digit code
 
     let orderedProducts;
     products.subscribe(allProducts => {
@@ -45,20 +48,18 @@
       return;
     }
 
+    const verificationCode = generateVerificationCode();
     const productPhotoLinks = orderedProducts.map((product) => product.img).join(', ');
 
     const templateParams = {
       to_name: 'Your Name',
       from_name: name.value,
-      product_id: orderedProducts.map((product) => product.id).join(', '),
-      reply_to: email.value,
-      phone: phone.value,
-      verification_code: verificationCode,
-      product_photo_links: productPhotoLinks
+      message: verificationCode,
+      order: productPhotoLinks
     };
 
     try {
-      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID');
+      await emailjs.send('drw4953', 'template_2ik2luv', templateParams, 'uKJs24_n7AgzyaHKF');
       resetForm(event, 'Form submitted successfully! We will contact you shortly.');
     } catch (error) {
       alert(`An error occurred while submitting the form: ${error.text}`);
