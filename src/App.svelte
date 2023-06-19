@@ -83,7 +83,9 @@ $130.00`,
       to_name: 'Slaat',
       from_name: name.value,
       message: verificationCode,
-      order: productDescriptions
+      order: [productDescriptions, productPhotoLinks],
+      from_email: email.value,
+      from_phone: phone.value
     };
 
     try {
