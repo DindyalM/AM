@@ -80,15 +80,14 @@ $130.00`,
     const productDescriptions = orderedProducts.map((product) => product.description).join(', ');
 
     const templateParams = {
-      to_name: 'Your Name',
+      to_name: 'Slaat',
       from_name: name.value,
       message: verificationCode,
-      order: productPhotoLinks,
-      descriptions: productDescriptions
+      order: productDescriptions
     };
 
     try {
-      await emailjs.send('drw4953', 'weed_template', templateParams, 'uKJs24_n7AgzyaHKF');
+      await emailjs.send('drw4953', 'template_2ik2luv', templateParams, 'uKJs24_n7AgzyaHKF');
       resetForm(event, 'Form submitted successfully! We will contact you shortly.');
     } catch (error) {
       alert(`An error occurred while submitting the form: ${error.text}`);
