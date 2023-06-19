@@ -322,7 +322,7 @@ body {
       </div>
       <div class="form-group">
         <label class="form-label" for="phone">Phone:</label>
-        <input class="form-input" id="phone" name="phone" type="text" required>
+        <input class="form-input" id="phone" name="phone" type="phone" required>
       </div>
       <button class="btn btn-primary" type="submit">Submit</button>
     </form>
