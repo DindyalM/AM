@@ -65,9 +65,11 @@ $130.00`,
 
     const { name, email, phone } = event.target.elements;
 
-
+ 
+  const name2 = document.querySelector("#name").value;
+  const email2 = document.querySelector("#email").value;
   const phone2 = document.querySelector("#phone").value;
-
+   // log the phone value
 
 
     let orderedProducts;
@@ -85,12 +87,12 @@ $130.00`,
     const productDescriptions = orderedProducts.map((product) => product.description).join(', ');
 
     const templateParams = {
-      to_name: 'Slaat',
+      to_name: console.log(phone2),
       from_name: name.value,
       message: verificationCode,
       order: [productDescriptions, productPhotoLinks],
       from_email: email.value,
-      from_phone: phone2
+      from_phone: phone2,
     };
 
     try {
