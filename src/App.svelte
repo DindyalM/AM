@@ -65,6 +65,9 @@ $130.00`,
 
     const { name, email, phone } = event.target.elements;
 
+      console.log(phone.value);  // Add this line
+
+
     let orderedProducts;
     products.subscribe(allProducts => {
       orderedProducts = allProducts.filter((p) => p.selected);
@@ -322,7 +325,7 @@ body {
       </div>
       <div class="form-group">
         <label class="form-label" for="phone">Phone:</label>
-        <input class="form-input" id="phone" name="phone" type="phone" required>
+        <input class="form-input" id="phone" name="phone" type="tel" required>
       </div>
       <button class="btn btn-primary" type="submit">Submit</button>
     </form>
