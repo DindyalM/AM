@@ -187,7 +187,7 @@ body {
 }
 
 .product-card img {
-  width: 100%;
+  width: 120px;
   height: auto;
   border-radius: 8px;
   margin-bottom: 10px;
