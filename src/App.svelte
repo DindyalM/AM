@@ -88,7 +88,7 @@ $130.00`,
     };
 
     try {
-      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID');
+      await emailjs.send('drw4953', 'weed_template', templateParams, 'uKJs24_n7AgzyaHKF');
       resetForm(event, 'Form submitted successfully! We will contact you shortly.');
     } catch (error) {
       alert(`An error occurred while submitting the form: ${error.text}`);
