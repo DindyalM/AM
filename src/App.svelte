@@ -101,132 +101,173 @@ $130.00`,
 </script>
 
 <style>
-  .header-section {
-    background-color: #603811;
-    padding: 20px;
-  }
+ /* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .header-section h1 {
-    font-size: 32px;
-    color: #FFF;
-    margin: 0;
-    text-align: center;
-  }
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F2F2F2;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
 
-  .hero-section {
-    background-color: #F2E7D4;
-    padding: 40px 0;
-    text-align: center;
-  }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  .hero-title {
-    font-size: 36px;
-    color: #603811;
-    margin: 0;
-  }
+/* Header section */
+.header-section {
+  background-color: #603811;
+  padding: 2px 0;
+  text-align: center;
+}
 
-  .hero-subtitle {
-    font-size: 20px;
-    color: #603811;
-    margin: 10px 0 0;
-  }
+.header-section h1 {
+  font-size: 24px;
+  color: #FFF;
+  margin: 0;
+}
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
+/* Hero section */
+.hero-section {
+  background-color: #F2E7D4;
+  padding: 3px 0;
+  text-align: center;
+}
 
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-  }
+.hero-title {
+  font-size: 29px;
+  color: #603811;
+  margin: 0;
+}
 
-  .product-card {
-    background-color: #FFF;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+.hero-subtitle {
+  font-size: 16px;
+  color: #603811;
+  margin: 10px 0 0;
+}
 
-  .product-card.selected {
-    background-color: #F2E7D4;
-  }
+/* Image grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 6px;
+}
 
-  .product-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-  }
+.product-card {
+  background-color: #FFF;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-  .product-card-content {
-    margin-top: 10px;
-  }
+.product-card.selected {
+  background-color: #F2E7D4;
+}
 
-  .product-card-title {
-    font-size: 24px;
-    color: #603811;
-    margin: 0;
-  }
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover; /* Ensure the images maintain their aspect ratio */
+}
 
-  .product-card-description {
-    font-size: 18px;
-    color: #333;
-    margin: 10px 0;
-  }
+.product-card-content {
+  margin-top: 10px;
+}
 
-  .form-section {
-    margin-top: 20px;
-  }
+.product-card-title {
+  font-size: 20px;
+  color: #603811;
+  margin: 0;
+}
 
-  .header {
-    font-size: 28px;
-    color: #603811;
-    margin: 0 0 20px;
-    text-align: center;
-  }
+.product-card-description {
+  font-size: 14px;
+  color: #333;
+  margin: 10px 0;
+}
 
-  .form-group {
-    margin-bottom: 15px;
-  }
+/* Form section */
+.form-section {
+  margin-top: 20px;
+}
 
-  .form-label {
-    font-size: 18px;
-    color: #603811;
-    margin-bottom: 5px;
-    display: block;
-  }
+.header {
+  font-size: 20px;
+  color: #603811;
+  margin-bottom: 10px;
+  text-align: center;
+}
 
-  .form-input {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #CCC;
-    width: 100%;
-    box-sizing: border-box;
-  }
+.form-group {
+  margin-bottom: 15px;
+}
 
-  .btn {
-    background-color: #603811;
-    color: #FFF;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+.form-label {
+  font-size: 16px;
+  color: #603811;
+  margin-bottom: 5px;
+  display: block;
+}
 
-  .btn-primary {
-    background-color: #603811;
-  }
+.form-input {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #CCC;
+  width: 100%;
+  box-sizing: border-box;
+}
 
-  .btn-primary:hover {
-    background-color: #4B290D;
-  }
+.btn {
+  background-color: #603811;
+  color: #FFF;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #603811;
+}
+
+.btn-primary:hover {
+  background-color: #4B290D;
+}
+
+/* Instructions section */
+.instructions-section {
+  margin-top: 30px;
+}
+
+.instructions-header {
+  font-size: 18px;
+  color: #603811;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.instructions-content {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 1.4;
+}
 </style>
 
 <div class="header-section">
@@ -237,6 +278,12 @@ $130.00`,
   <h2 class="hero-title">Discover the Finest Cannabis Products</h2>
   <p class="hero-subtitle">Browse our selection and place your order</p>
 </div>
+
+<div class="instructions-section">
+  <h2 class="instructions-header">How to Use the Website</h2>
+  <p class="instructions-content">We value your time and will contact you as soon as your form is submitted. Thank you for choosing our services.</p>
+</div>
+
 
 <div class="container">
   <div class="image-grid">

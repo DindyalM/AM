@@ -67,7 +67,8 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.product-card.selected {
+.product-card:hover,
+.product-card:focus {
   background-color: #f2e7d4;
 }
 
@@ -76,10 +77,6 @@ body {
   height: auto;
   border-radius: 8px;
   margin-bottom: 10px;
-}
-
-.product-card-content {
-  margin-top: 10px;
 }
 
 .product-card-title {
@@ -92,55 +89,6 @@ body {
   font-size: 18px;
   color: #333;
   margin: 10px 0;
-}
-
-/* Pricing */
-.pricing-section {
-  margin-top: 40px;
-}
-
-.pricing-table {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-}
-
-.pricing-card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  transition: background-color 0.3s ease;
-}
-
-.pricing-card:hover {
-  background-color: #f2e7d4;
-}
-
-.pricing-card.selected {
-  background-color: #f2e7d4;
-}
-
-.pricing-card h2 {
-  font-size: 24px;
-  color: #603811;
-  margin: 0;
-}
-
-.pricing-card p {
-  font-size: 18px;
-  color: #333;
-  margin: 10px 0;
-}
-
-.pricing-card .original-price {
-  text-decoration: line-through;
-  color: #999;
-}
-
-.pricing-card .discounted-price {
-  font-weight: bold;
-  color: #603811;
 }
 
 /* Form section */
@@ -196,25 +144,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.submit-button:hover {
-  background-color: #4b290d;
-}
-
-/* Scroll to top button */
-.scroll-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #603811;
-  color: #fff;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 999;
-}
-
-.scroll-to-top:hover {
+.submit-button:hover,
+.submit-button:focus {
   background-color: #4b290d;
 }
