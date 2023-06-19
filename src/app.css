@@ -11,12 +11,13 @@ body {
   background-color: #f2f2f2;
   color: #333;
   line-height: 1.6;
+  padding: 0 10px; /* Padding on left and right */
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0; /* Remove padding from container */
 }
 
 /* Header section */
@@ -147,4 +148,58 @@ body {
 .submit-button:hover,
 .submit-button:focus {
   background-color: #4b290d;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  body {
+    padding: 0 5px; /* Reduce padding on mobile */
+  }
+
+  .container {
+    padding: 0; /* Make sure there's no padding */
+  }
+
+  .header-section h1 {
+    font-size: 28px; /* Reduce font-size on mobile */
+  }
+
+  .hero-title {
+    font-size: 30px; /* Reduce font-size on mobile */
+  }
+
+  .hero-subtitle {
+    font-size: 16px; /* Reduce font-size on mobile */
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Display 2 columns instead of 4 on mobile */
+  }
+
+  .product-card-title {
+    font-size: 20px; /* Reduce font-size on mobile */
+  }
+
+  .product-card-description {
+    font-size: 14px; /* Reduce font-size on mobile */
+  }
+
+  .header {
+    font-size: 24px; /* Reduce font-size on mobile */
+  }
+
+  .form-label {
+    font-size: 16px; /* Reduce font-size on mobile */
+  }
+
+  .form-input {
+    font-size: 14px; /* Reduce font-size on mobile */
+  }
+
+  .submit-button {
+    font-size: 14px; /* Reduce font-size on mobile */
+  }
 }
