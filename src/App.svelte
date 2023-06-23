@@ -8,8 +8,7 @@
       id: 1,
       img: `https://cheapcanna.org/wp-content/uploads/2023/06/Black-Diamond-AA-cc-700x700.jpg`,
       selected: false,
-      description: `$35.00
-$70.00
+      description: `
 $130.00`,
       name: 'Black Diamond'
     },
@@ -17,28 +16,25 @@ $130.00`,
       id: 2,
       img: 'https://cheapcanna.org/wp-content/uploads/2023/05/Frosty-Banana-AA-cc-700x700.jpg',
       selected: false,
-      description: `$30.00
-$70.00
+      description: `
 $130.00`,
-      name: 'Frosty Banana'
+      name: 'Chunkey Banana'
     },
     {
       id: 3,
       img: `https://cheapcanna.org/wp-content/uploads/2023/06/LSD-AA-cc-700x700.jpg`,
       selected: false,
-      description: `$30.00
-$70.00
+      description: `
 $130.00`,
-      name: 'LSD'
+      name: 'Larry OG'
     },
     {
       id: 4,
       img: `https://cheapcanna.org/wp-content/uploads/2023/06/Romulan-AA-cc-700x700.jpg`,
       selected: false,
-      description: `$35.00
-$70.00
+      description: `
 $130.00`,
-      name: 'Romulan'
+      name: 'Rome 6'
     }
   ]);
 
